@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@layer base {
+    body {
+        font-family: 'Roboto', sans-serif !important;
+        letter-spacing: 0.05rem;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+
+        @media (max-width: 667px) {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 1.2em;
+        }
+    }
+
+    .sub-title {
+        font-size: 1.8em;
+        font-weight: 600;
+
+        @media (max-width: 667px) {
+            font-size: 1.6em;
+        }
+    }
+
+    .text-base {
+        @media (max-width: 667px) {
+            font-size: 14px !important;
+        }
+    }
+
+    p {
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+        letter-spacing: 0.05rem;
+
+        @media (max-width: 576px) {
+            font-size: 0.9em;
+            font-weight: 400 !important;
+        }
+    }
+
+    .bg-red {
+        background-color: #ee3235;
+    }
+
+    .text-red {
+        color: #ee3235;
+    }
+
+
+    .Container {
+        margin: auto;
+        max-width: 1024px;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    @media (max-width:1599px) and (min-width: 1024px){
+        .Container {
+            margin: auto;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    
+  
+
+
+    @media only screen and (min-width: 1600px){
+    .Container {
+        max-width: 1920px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+
+    .subBanner {
+        background-image: url(../assets/img/page-header.svg);
+    }
+}
+
+.sc-triangle {
+    animation: mymove 10s infinite;
+}
+
+.ls-5 {
+    letter-spacing: 0.5px;
+}
+.ls-6 {
+    letter-spacing: 6px;
+}
+
+@keyframes mymove {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.sc-triangle2 {
+    animation: mymove2 15s infinite;
+}
+
+
+
+@keyframes mymove2 {
+    0% {
+        bottom: 0%;
+    }
+
+    50% {
+        bottom: 5%;
+    }
+
+    100% {
+        bottom: 10%;
+    }
+}
+
+.video-section{
+   @media (max-width:1360px) and (min-width:1024px){
+    margin-right: 70px !important;
+   }
+}
+
+.plan {
+    background-image: linear-gradient(-145deg, #fffdfd, #fffdfd);
+}
+
+.at-a-glance-wrap {
+    @media (max-width: 1440px) {
+        left: 0 !important;
+    }
+
+    @media (max-width: 1400px) {
+        left: 0 !important;
+        top: -70px !important;
+
+        .at-a-glance-content {}
+    }
+}
+
+@media (max-width: 1400px) {
+    .project-summary {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .at-a-glance-content {
+        padding-left: 25px !important;
+    }
+}
+
+@media (max-width: 1600px) {
+    .project-summary-content {
+        padding-top: 100px !important;
+    }
+}
+
+
+.full-case-study-paragraph {
+    background-image: linear-gradient(rgba(0, 45, 66, 0.7), rgba(0, 45, 66, 0.7)), url("https://cf-assets.s3.amazonaws.com/web_hero.png?fm=webp&q=35&w=1920");
+    background-position: 50%;
+
+}
+.FutureDJs {
+    background-image: linear-gradient(rgba(0, 45, 66, 0.7), rgba(0, 45, 66, 0.7)), url("https://cf-assets.s3.amazonaws.com/FutureDJs_-_X2O_Virtual_Classroom_opt.jpg?fm=webp&q=35&w=1486");
+    background-position: 50%;
+
+}
+
+.longItem {
+    width: 70%;
+
+    @media (max-width:813px) {
+        width: 100% !important;
+    }
+}
+.caseStudyItem{
+    @media (max-width:768px) {
+
+        .m-4{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            margin-bottom: 30px !important;
+        }
+    }
+}
+.smallItem {
+    width: 30%;
+
+    @media (max-width:813px) {
+        width: 100% !important;
+    }
+}
+
+.color-btn {
+    &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            top: 0;
+            bottom: 0;
+            transition-property: left,right,background;
+            transition-duration: .5s;
+            transition-timing-function: cubic-bezier(0.17,0.57,0.38,0.95);
+        
+    }
+
+    &:hover {
+        
+        &::after {
+            left: 0;
+            right: 0;
+            background: hsla(0,0%,100%,.2);
+        }
+    }
+}
+.readStoryBtn{
+    &::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        transition-property: left,right,background;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0.17,0.57,0.38,0.95);;
+    
+}
+
+&:hover {
+    
+    &::after {
+        left: 0;
+        right: 0;
+        background: hsla(0,0%,100%,.2);
+    }
+}
+}
+
